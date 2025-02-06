@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Collectible
   layers:
   - Default
   - TransparentFX
@@ -41,17 +42,23 @@ TagManager:
   - name: BG
     uniqueID: 1637166681
     locked: 0
-  - name: Fore
+  - name: Terrain
     uniqueID: 152187975
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 1634933861
+  - name: Collectibles
+    uniqueID: 1146030387
     locked: 0
   - name: Foreground
     uniqueID: 1714936897
+    locked: 0
+  - name: Player
+    uniqueID: 1634933861
+    locked: 0
+  - name: Fore Obstruct
+    uniqueID: 3378406127
     locked: 0
   m_RenderingLayers:
   - Default
