@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Flip()
+    private void Flip() //tätä yksinkertaistettiin ja paljon
     {
         // Switch the way the player is labelled as facing.
         m_FacingRight = !m_FacingRight;
