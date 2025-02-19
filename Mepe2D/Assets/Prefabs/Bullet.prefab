@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4678358390084589165}
   - component: {fileID: 9077655673673248019}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5217542401477964074}
   - component: {fileID: 4676171212905079634}
   - component: {fileID: 6703414041441783206}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9618945ee90a5f542810a64a91324ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
   rb: {fileID: 5217542401477964074}
   damage: 50
   collisionLayers:
