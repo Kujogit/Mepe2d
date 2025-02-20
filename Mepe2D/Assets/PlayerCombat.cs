@@ -11,6 +11,8 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (FindFirstObjectByType<PauseMenu>().GameIsPaused) return;
+
         if (Input.GetButtonDown("Attack"))
         {
             Attack();
