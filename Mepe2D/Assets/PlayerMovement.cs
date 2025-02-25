@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     bool crouch = false;
     public Animator animator; //antaa työskennellä animatorin kanssa editorin sisällä
     public Rigidbody2D rb; //yhteys pelaajahahmon rigid bodyyn
+
+
 
     void Update()
     {

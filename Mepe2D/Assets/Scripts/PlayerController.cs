@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     private Vector3 m_Velocity = Vector3.zero;
     public bool IsGrounded => m_Grounded;
 
+    public AudioSource audioSource; //t‰m‰ on luotu pelaajan alle
+    public AudioClip JumpFX; //raahaa jump FX:iin jumpfx
+
     [Header("Events")]
     [Space]
 
@@ -137,10 +140,11 @@ public class PlayerController : MonoBehaviour
             // Add a vertical force to the player.
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            audioSource.PlayOneShot(JumpFX); //hox ! ‰‰niefekti
         }
     }
 
-    private void Flip() //t‰t‰ yksinkertaistettiin ja paljon
+    private void Flip() //t‰t‰ yksinkertaistettiin ja paljon 
     {
         // Switch the way the player is labelled as facing.
         m_FacingRight = !m_FacingRight;
