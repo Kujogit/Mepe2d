@@ -12,12 +12,21 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        currentHealth = maxHealth; 
+        //tallentaa healthin gamemanageriin
+        if (GameManager.instance != null)
+        {
+            currentHealth = GameManager.instance.playerHealth;
+        }
+        else
+        {
+            currentHealth = maxHealth;
+        }
     }
 
     void Update()
     {
         healthBar.fillAmount = Mathf.Clamp(currentHealth / maxHealth, 0, 1);
+        GameManager.instance.playerHealth = currentHealth;
     }
 
     public void AddHealth(int health)
@@ -40,8 +49,13 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
-    void Die() 
+    void Die()
     {
+        //hudissa hp:t menee t‰ysille ennenkuin kuollaan, pit‰isi laittaa paneeli peitt‰m‰‰n kuoleman ajaksi, esim overlay
+        currentHealth = maxHealth;
+        GameManager.instance.playerHealth = currentHealth; 
+
+
         var currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
     }
